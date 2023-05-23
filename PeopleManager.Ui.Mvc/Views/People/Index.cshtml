@@ -51,13 +51,32 @@
 
 @section Scripts
 {
-    <script>
+   @* <script>
         $(function(){
             $("button[data-role='delete']").on("click", 
                 function()
                 {
                     let id = $(this).data("id");
                     $("input[name='id']").val(id);
+                });
+        });
+    </script>
+*@
+    <script>
+        $(function () {
+            // This is a jQuery shorthand for $(document).ready(). It executes the enclosed code when the document has finished loading.
+
+            $("button[data-role='delete']").on("click",
+                function () {
+                    // Selects all buttons with the attribute data-role="delete" and attaches a click event handler to them.
+
+                    let id = $(this).data("id");
+                    // Retrieves the value of the "data-id" attribute of the clicked button using jQuery's data() method.
+                    // $(this) refers to the clicked button element.
+
+                    $("input[name='id']").val(id);
+                    // Sets the value of the input field with the name attribute "id" to the value of the variable 'id'.
+                    // $("input[name='id']") selects the input field by its name attribute using jQuery, and .val() sets its value.
                 });
         });
     </script>

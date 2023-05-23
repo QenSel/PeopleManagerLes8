@@ -12,6 +12,7 @@ namespace PeopleManager.Ui.Mvc.Core
         }
 
         public DbSet<Person> People => Set<Person>();
+        public DbSet<Car> Cars => Set<Car>();
 
         public void Seed()
         {
@@ -37,5 +38,6 @@ namespace PeopleManager.Ui.Mvc.Core
 
             SaveChanges();
         }
+
     }
 }

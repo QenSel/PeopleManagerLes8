@@ -7,6 +7,7 @@ namespace PeopleManager.Ui.Mvc.Models
 {
     public class Person
     {
+       
         public int Id { get; set; }
 
         [Display(Name="First Name")]
@@ -24,5 +25,7 @@ namespace PeopleManager.Ui.Mvc.Models
 
         [Display(Name = "Description")]
         public string? Description { get; set; }
+
+        public IList<Car> ResponsibleForCars { get; set; } = new List<Car>();
     }
 }
